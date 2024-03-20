@@ -1,0 +1,145 @@
+html{
+    font-size: 62.5%;
+}
+body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    background-image: url('/static/images/lavadorasFondo.png'); /* Reemplaza 'ruta_de_la_imagen.jpg' con la ruta de tu imagen de fondo */
+    background-size: cover; /* Otra propiedad que puedes ajustar según tus necesidades */
+    /* Más propiedades de fondo si es necesario */
+  }
+  
+
+a{
+    text-decoration: none;
+    font-family: 'Inter', sans-serif;
+    color: black;
+    font-size: 200%;
+}
+
+ h1 {
+ text-align: center;
+ font-family: 'Inter', sans-serif;
+ }
+
+/*css de formulario de registro*/
+
+.signupFrm {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+  .form {
+    background-color: white;
+    width: 400px;
+    border: 8px solid #46cac8;
+    border-radius: 8px;
+    padding: 20px 40px;
+    box-shadow: 0 10px 25px rgb(0, 0, 0);
+  }
+
+
+  .title {
+    font-size: 50px;
+    margin-bottom: 50px;
+    color:rgb(76, 46, 82);
+  }
+
+  .inputContainer {
+    position: relative;
+    height: 45px;
+    width: 90%;
+    margin-bottom: 17px;
+  }
+  .inputContainer.password{
+    display: none;
+  }
+
+  .input {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    border: 1px solid #DADCE0;
+    border-radius: 7px;
+    font-size: 16px;
+    padding: 0 20px;
+    outline: none;
+    background: none;
+    z-index: 1;
+  }
+
+
+  ::placeholder {
+    color: transparent;
+  }
+
+  .label {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    padding: 0 4px;
+    background-color: white;
+    color: #DADCE0;
+    font-size: 16px;
+    transition: 0.5s;
+    z-index: 0;
+  }
+
+  .submitBtn {
+    display: block;
+    margin-left: 30%;
+    padding: 10px 8px;
+    border: none;
+    background-color: purple;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 30px;
+    align-items: center;
+
+    text-align: center;
+    width: 32%;
+
+  }
+
+  .submitBtn:hover {
+    background-color: #9867C5;
+    transform: translateY(-2px);
+    align-items: center;
+  }
+
+  .input:focus + .label {
+    top: -7px;
+    left: 3px;
+    z-index: 10;
+    font-size: 14px;
+    font-weight: 600;
+    color: purple;
+  }
+
+  .input:focus {
+    border: 2px solid purple;
+  }
+
+  .input:not(:placeholder-shown)+ .label {
+    top: -7px;
+    left: 3px;
+    z-index: 10;
+    font-size: 14px;
+    font-weight: 600;
+  }
+
+  .imgregistro {
+    border: 8px solid #46cac8;
+    position: relative;
+    right: 5%;
+    box-shadow: 0 10px 25px rgb(0, 0, 0);
+  }
+
+
