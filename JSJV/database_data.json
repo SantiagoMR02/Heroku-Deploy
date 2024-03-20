@@ -1,0 +1,71 @@
+{
+    "product_list": [
+        {
+            "model": "servicios.productlist",
+            "pk": 1,
+            "fields": {
+                "amount": 45,
+                "description": "Unos jeans",
+                "status": "Ninguno",
+                "category": "Pantalon"
+            }
+        }
+    ],
+    "type_service": [
+        {
+            "model": "servicios.typeservice",
+            "pk": 1,
+            "fields": {
+                "descriptionTS": "Tintoreria"
+            }
+        },
+        {
+            "model": "servicios.typeservice",
+            "pk": 2,
+            "fields": {
+                "descriptionTS": "Lavado especial"
+            }
+        },
+        {
+            "model": "servicios.typeservice",
+            "pk": 3,
+            "fields": {
+                "descriptionTS": "Lavanteria"
+            }
+        }
+    ],
+    "order_job": [
+        {
+            "model": "servicios.orderjob",
+            "pk": 1,
+            "fields": {
+                "totalPrice": 25,
+                "dateOT": "2024-03-04",
+                "productList": 1
+            }
+        }
+    ],
+    "output_oj": [
+        {
+            "model": "servicios.outputoj",
+            "pk": 1,
+            "fields": {
+                "productList": 1,
+                "amountOutputs": 456,
+                "dateOutput": "2024-03-04"
+            }
+        }
+    ],
+    "income": [
+        {
+            "model": "servicios.income",
+            "pk": 1,
+            "fields": {
+                "paymentMethod": "Efectivo",
+                "descriptionIncome": "pagar salario",
+                "totalincome": 8000000.0,
+                "orderJob": 1
+            }
+        }
+    ]
+}

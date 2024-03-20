@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Pdf actividades</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+    <!-- Bootstrap CSS v5.2.1 -->
+    <!--<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />-->
+
+    <style>
+        body {
+            background-color: #c2f0f0;
+            text-align: center; /* Centra el contenido del cuerpo del documento */
+        }
+
+        .content {
+            margin: 20px auto; /* Centra el contenido horizontalmente */
+            max-width: 800px; /* Define el ancho máximo del contenido */
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px; /* Espacio superior */
+            margin-bottom: 20px; /* Espacio inferior */
+        }
+
+        th,
+        td {
+            padding: 10px;
+            border: 1px solid #ddd;
+        }
+
+        footer {
+            background-color: #30c7c4;
+            color: white;
+            padding: 5px;
+            text-align: center;
+            margin-top: 20px; /* Espacio superior */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="content">
+        <h1 style="font-size: 20px;">Lista de Actividades</h1>
+
+        <table>
+            <thead>
+                <tr style="background-color: rgb(175, 172, 172);">
+                    <th>Fecha Actividad</th>
+                    <th>Tiempo de desarrollo</th>
+                    <th>Descripción Actividad</th>
+                    <th>Novedad Actividad</th>
+                    <th>Estado</th>
+                    <th>OT</th>
+                    <th>Insumo usado</th>
+                    <th>Cantidad de insumo utilizado</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for actividad in actividades %}
+                <tr>
+                    <td>{{ actividad.dateAc }}</td>
+                    <td>{{ actividad.timeAc }}</td>
+                    <td>{{ actividad.descriptionAc }}</td>
+                    <td>{{ actividad.noveltyAc }}</td>
+                    <td>{{ actividad.stateAc }}</td>
+                    <td>{{ actividad.orderJob }}</td>
+                    <td>{{ actividad.input.product_type }}</td>
+                    <td>{{ actividad.amountToUse }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+    <footer>
+        <p class="fs-5 px-5 pt-3">ExpertD. &copy; Todos los derechos Recervados 2024</p>
+    </footer>
+</body>
+
+</html>

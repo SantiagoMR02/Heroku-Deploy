@@ -1,0 +1,45 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Pdf Inventarios</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    
+</head>
+    <body style="background-color: #c2f0f0;">
+    <div style="background-color: #30c7c4; padding: 5px; text-align: center;">
+        <h1 style="color: white; font-size: 20px;">Inventario de la Empresa</h1>
+    </div>
+
+    <div style="margin: 20px;">
+        <table style="width: 100%; border-collapse: collapse;">
+            <thead>
+                <tr style="background-color: rgb(175, 172, 172);">
+                    <th style="padding: 10px; border: 1px solid #ddd;">Cantidad Insumos</th>
+                    <th style="padding: 10px; border: 1px solid #ddd;">Proovedor Insumo</th>
+                    <th style="padding: 10px; border: 1px solid #ddd;">Cantidad maquinas</th>
+                    <th style="padding: 10px; border: 1px solid #ddd;">Proovedor maquinas</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for inventario in inventarios %}
+                <tr>
+                    <td style="border: 1px solid #ddd; padding: 10px;">{{ inventario.input.amountI }}</td>
+                    <td style="border: 1px solid #ddd; padding: 10px;">{{ inventario.input.supplier_nameI }}</td>
+                    <td style="border: 1px solid #ddd; padding: 10px;">{{ inventario.machine.amountM }}</td>
+                    <td style="border: 1px solid #ddd; padding: 10px;">{{ inventario.machine.supplier_nameM }}</td>
+                </tr>
+                {% endfor %}
+                
+            </tbody>
+        </table>
+    </div>
+</body>
+
+<footer class="w-100 d-felx align-items justify-content-center flex-warp">
+    <p class="fs-5 px-5 pt-3">ExpertD. &copy; Todos los derechos Recervados 2024</p>
+</footer>
+</html>
