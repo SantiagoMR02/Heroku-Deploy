@@ -114,6 +114,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    "whitenoise.middleware.WhiteNoiseMiddleware",
 ]
 
 
@@ -217,3 +218,4 @@ EMAIL_USE_TLS = True
 EMAIL_HOST_USER = 'jai8der22@gmail.com'
 EMAIL_HOST_PASSWORD = 'dylmswdphpsapohv'
 
+STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
