@@ -215,3 +215,5 @@ EMAIL_HOST_USER = 'jai8der22@gmail.com'
 EMAIL_HOST_PASSWORD = 'dylmswdphpsapohv'
 
 STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
+
+DISABLE_COLLECTSTATIC= 1
